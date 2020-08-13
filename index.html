@@ -13,7 +13,10 @@ request.send()
   
 document.getElementById("demo").innerHTML = request.response;
 
-
+function show()
+  {
+document.getElementById("demo").innerHTML = request.response;
+  }
 </script>
 <html>
 <head>
@@ -22,6 +25,7 @@ document.getElementById("demo").innerHTML = request.response;
 <body>
 <div id="demo" class="container">
 This shows the weather
+  <button onclick="show()">Show weather</button>
   </div>
 </body>
 </html>
