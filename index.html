@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="styles.css">
 </style>
 <script>
-let requestURL = 'api.openweathermap.org/data/2.5/weather?q=Krakow,pl&mode=html&APPID=606103aa99b1bf025d1b02ff40ca516e';
+let requestURL = 'api.openweathermap.org/data/2.5/weather?q=Krakow,pl&APPID=606103aa99b1bf025d1b02ff40ca516e';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
-request.responseType = 'html';
+request.responseType = 'json';
 request.send();
 </script>
 <html>
