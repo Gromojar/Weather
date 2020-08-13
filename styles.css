@@ -1,6 +1,9 @@
 .container
 {
-background-color:blue;
+background-color:gray;
 color:white;
 text-align:center;
+display:flex;
+height:50%;
+width:50%;
 }
