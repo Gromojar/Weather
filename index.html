@@ -13,7 +13,7 @@ request.send()
 console.log(request.response);
 var log = request.response;
   
-document.write(log);
+document.getElementById("demo").innerHTML = log;
 
 
 </script>
@@ -22,7 +22,7 @@ document.write(log);
 <title>Weather App</title>
 </head>
 <body>
-<div class="container">
+<div id="demo" class="container">
 This shows the weather
   </div>
 </body>
