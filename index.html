@@ -11,12 +11,8 @@ request.onload = function () {
 request.send()
   
 console.log(request);
-if(request.status === 200)
-{
 console.log(JSON.parse(request.response));
-}
-var obj = JSON.parse(request.response);
-console.log(obj[lon]);
+
 
 </script>
 <html>
