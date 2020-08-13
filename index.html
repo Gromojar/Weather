@@ -15,10 +15,9 @@ if(request.status === 200)
 {
 console.log(JSON.parse(request.response));
 }
-  else
-  {
-console.log("error");
-  }
+var obj = JSON.parse(request.response);
+console.log(obj[lon]);
+
 </script>
 <html>
 <head>
