@@ -12,7 +12,7 @@ request.send()
 
 function show()
   {
-var mydata = JSON.parse(data);
+var mydata = JSON.parse(request.response);
 alert(mydata[0].weather);
 alert(mydata[0].main);
 alert(mydata[1].visibility);
