@@ -37,7 +37,7 @@ mydata2 = JSON.parse(request2.response);
     gif = Math.floor((0 - -10) * Math.random());
 
 
-    document.getElementById("cont").innerHTML += "In Kraków there are " + temp + "°C." + " I can see " + cloud_description;
+    document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " I can see " + cloud_description;
     if(temp > 20)
     {
       var imgsunny = "'images/Hot.png'";
@@ -72,7 +72,7 @@ mydata2 = JSON.parse(request2.response);
 <title>Weather App</title>
 </head>
 <body>
-<div class="mx-auto">
+<div class="container">
 <div id="cont" class="mx-auto">
   <button type="button" class="btn btn-info" onclick="show()">Show weather</button>
   </div>
