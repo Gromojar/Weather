@@ -23,7 +23,7 @@ mydata = JSON.parse(request.response);
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
-    document.getElementById("cont").innerHTML += "In Kraków there is " + temp + "°C" + "There are " + cloud_description;
+    document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
   }
 </script>
 <html>
