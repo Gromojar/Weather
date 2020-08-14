@@ -7,6 +7,7 @@ var cloud;
 var cloud_description;
 var mydata;
 var request = new XMLHttpRequest()
+var request2 = new XMLHttpRequest();
 
 request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
 
@@ -38,7 +39,6 @@ mydata = JSON.parse(request.response);
          {
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
-      var request2 = new XMLHttpRequest();
 
       request2.open('GET', 'api.giphy.com/v1/gifs/search');
 
