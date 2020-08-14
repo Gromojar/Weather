@@ -12,7 +12,12 @@ request.send()
 function show()
   {
 var mydata = JSON.parse(request.response);
-    console.log(mydata.main.temp);
+    //console.log(mydata.main.temp);
+    var temp = mydata.main.temp;
+    var cloud = mydata.weather.description;
+    
+    console.log(temp);
+    console.log(cloud);
   }
 </script>
 <html>
