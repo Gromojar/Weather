@@ -3,14 +3,7 @@
 background-color:gray;
 color:white;
 text-align:center;
-display:flex;
 height:50%;
 width:50%;
 }
-.align-self-center mr-3
-{
-text-align:center;
-display:flex;
-height:50%;
-width:50%;
-}
+
