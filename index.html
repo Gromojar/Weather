@@ -26,7 +26,8 @@ mydata = JSON.parse(request.response);
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
     if(temp > 20)
     {
-document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
+document.getElementById("cont").innerHTML += "<br><br> So hot outside!" + "<img src="/images/Hot.png"></img>;
+      
     }
   }
 </script>
