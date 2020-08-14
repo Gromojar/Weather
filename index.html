@@ -9,7 +9,6 @@ request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl
 request.onload = function () {
 }
 request.send()
-var mydata = JSON.parse(request.response);
 function show()
   {
 var mydata = JSON.parse(request.response);
