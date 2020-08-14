@@ -28,7 +28,7 @@ mydata = JSON.parse(request.response);
     {
       var img = "'images/Hot.png'"
 document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
-      document.getElementById("img").innerHTML = "<img src=" + img + ">";
+      document.getElementById("img").innerHTML += "<img class='align-self-center mr-3' src=" + img + ">";
       
     }
   }
@@ -45,7 +45,7 @@ document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
   </p>
   </div>
   <div id="img">
-    <img class="img-fluid"></img>
+    <img class="align-self-center mr-3"></img>
   </div>
 </body>
 </html>
