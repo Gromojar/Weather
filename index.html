@@ -50,7 +50,7 @@ mydata2 = JSON.parse(request2.response);
 
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
-      urlgif = "<video width='320' height='240' controls>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+      urlgif = "<video width='320' height='240' autoplay>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
       document.getElementById("cont").innerHTML += urlgif;
 
       
