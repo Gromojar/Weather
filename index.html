@@ -31,7 +31,7 @@ mydata = JSON.parse(request.response);
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
-  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud_description;
+  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud;
   request2.open('GET', requesturl, true);
            request2.onload = function () {
 }
