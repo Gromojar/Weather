@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 <script>
+var temp;
+var cloud;
+var mydata;
 var request = new XMLHttpRequest()
 
 request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
@@ -11,10 +14,10 @@ request.onload = function () {
 request.send()
 function show()
   {
-var mydata = JSON.parse(request.response);
+mydata = JSON.parse(request.response);
     //console.log(mydata.main.temp);
-    var temp = mydata.main.temp;
-    var cloud = mydata.weather.main;
+    temp = mydata.main.temp;
+    cloud = mydata.weather[0];
     console.log(mydata);
     console.log(temp);
     console.log(cloud);
