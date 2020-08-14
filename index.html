@@ -14,24 +14,26 @@ var request = new XMLHttpRequest()
 var request2 = new XMLHttpRequest();
 
 request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
-request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=Sunny', true);
+//request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=Sunny', true);
 request.onload = function () {
 
 }
 request.send();
-request2.send();
-function show()
-  {
-mydata = JSON.parse(request.response);
-mydata2 = JSON.parse(request2.response);
-    //console.log(mydata.main.temp);
-    gif = Math.floor((0 - -10) * Math.random());
+//request2.send();
+  mydata = JSON.parse(request.response);
     temp = mydata.main.temp;
     cloud = mydata.weather[0].main;
     cloud_description = mydata.weather[0].description;
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
+function show()
+  {
+//mydata = JSON.parse(request.response);
+//mydata2 = JSON.parse(request2.response);
+    //console.log(mydata.main.temp);
+    gif = Math.floor((0 - -10) * Math.random());
+
 
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
     if(temp > 20)
