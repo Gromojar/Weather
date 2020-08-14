@@ -7,6 +7,8 @@ var cloud;
 var cloud_description;
 var mydata;
 var mydata2;
+var gif;
+var gifurl;
 var request = new XMLHttpRequest()
 var request2 = new XMLHttpRequest();
 
@@ -23,6 +25,7 @@ function show()
   {
 mydata = JSON.parse(request.response);
     //console.log(mydata.main.temp);
+    gif = Math.floor((0 - -10) * Math.random());
     temp = mydata.main.temp;
     cloud = mydata.weather[0].main;
     cloud_description = mydata.weather[0].description;
@@ -45,6 +48,8 @@ mydata = JSON.parse(request.response);
          {
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
+      urlgif = "<img src='" + mydata2.data[gif].embed_url + "'>";
+      document.getElementById("cont").innerHTML += urlgif;
 
       
       mydata2 = JSON.parse(request2.response);
