@@ -5,4 +5,7 @@ padding-right:auto;
 text-align:center;
 
 }
-
+.container
+{
+border-radius:10px;
+}
