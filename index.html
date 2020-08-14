@@ -6,6 +6,7 @@ var temp;
 var cloud;
 var cloud_description;
 var mydata;
+var mydata2;
 var request = new XMLHttpRequest()
 var request2 = new XMLHttpRequest();
 
@@ -29,6 +30,7 @@ mydata = JSON.parse(request.response);
     {
       var imgsunny = "'images/Hot.png'";
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
+      
 
       if(cloud_description == "clear sky")
          {
@@ -40,9 +42,8 @@ mydata = JSON.parse(request.response);
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
 
-      request2.open('GET', 'api.giphy.com/v1/gifs/search&q=sunny');
-
-      request2.setRequestHeader('api_key', 'A1RvKIagTgv0e02pLft03AxVIcDE5H8S');  
+      request2.open('GET', 'api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=' + cloud_description);
+      mydata2 = JSON.parse(request2.response);
            
          }
       
