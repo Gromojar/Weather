@@ -24,6 +24,10 @@ mydata = JSON.parse(request.response);
     console.log(cloud);
     console.log(cloud_description);
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
+    if(temp > 20)
+    {
+document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
+    }
   }
 </script>
 <html>
