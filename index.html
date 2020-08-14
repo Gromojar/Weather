@@ -14,7 +14,7 @@ function show()
 var mydata = JSON.parse(request.response);
     //console.log(mydata.main.temp);
     var temp = mydata.main.temp;
-    var cloud = mydata.weather.description;
+    var cloud = mydata.weather.main;
     
     console.log(temp);
     console.log(cloud);
