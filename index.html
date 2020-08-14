@@ -12,9 +12,11 @@ request.send()
 
 function show()
   {
-JSONParser parse = new JSONParser();
-JSONObject jobj = (JSONObject)parse.parse(request.response);
-JSONArray jsonarr_1 = (JSONArray) jobj.get("results");
+var mydata = JSON.parse(data);
+alert(mydata[0].weather);
+alert(mydata[0].main);
+alert(mydata[1].visibility);
+alert(mydata[1].clouds);
   }
 </script>
 <html>
