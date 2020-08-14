@@ -31,11 +31,6 @@ mydata = JSON.parse(request.response);
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
-  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud;
-  request2.open('GET', requesturl, true);
-           request2.onload = function () {
-}
-request2.send()
 
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
     if(temp > 20)
@@ -51,6 +46,11 @@ request2.send()
          }
       if(cloud_description == "few clouds")
          {
+  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud;
+  request2.open('GET', requesturl, true);
+           request2.onload = function () {
+}
+request2.send()
       mydata2 = JSON.parse(request2.response);
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
