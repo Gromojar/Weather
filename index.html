@@ -42,7 +42,7 @@ mydata = JSON.parse(request.response);
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
 
-      request2.open('GET', 'api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q= + "sunny'");
+      request2.open('GET', 'api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=sunny');
       mydata2 = JSON.parse(request2.response);
            
          }
