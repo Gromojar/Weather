@@ -8,7 +8,7 @@ var cloud_description;
 var mydata;
 var request = new XMLHttpRequest()
 
-request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
+request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
 
 request.onload = function () {
 }
@@ -27,7 +27,7 @@ mydata = JSON.parse(request.response);
     if(temp > 20)
     {
       var img = "'images/Hot.png'"
-document.getElementById("cont").innerHTML += "<br><br> So hot outside!" + "<img src=" + img + ">";
+document.getElementById("cont").innerHTML += "<br><br> So hot outside!" + "<div>" + "<img src=" + img + ">" + "/div>";
       
     }
   }
