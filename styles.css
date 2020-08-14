@@ -1,9 +1,8 @@
-.container
+.button
 {
-background-color:gray;
-color:white;
+padding-left:auto;
+padding-right:auto;
 text-align:center;
-height:50%;
-width:50%;
+
 }
 
