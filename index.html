@@ -26,9 +26,17 @@ mydata = JSON.parse(request.response);
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
     if(temp > 20)
     {
-      var img = "'images/Hot.png'"
+      var imgsunny = "'images/Hot.png'";
+      var imgsunnycloudy = "'images/Hotwithclouds.png'";
 document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
-      document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + img + ">";
+      if(cloud_description == "clear sky"
+         {
+      document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
+    }
+      if(cloud_description == "few clouds"
+         {
+      document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
+    }
       
     }
   }
