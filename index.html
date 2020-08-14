@@ -18,8 +18,8 @@ request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl
 request.onload = function () {
 }
 request.send()
-  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + "sunny";
-  request2.open('GET', requesturl, true);
+  //requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + "sunny";
+  request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=sunny', true);
            request2.onload = function () {
 }
 request2.send()
