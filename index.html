@@ -29,11 +29,11 @@ mydata = JSON.parse(request.response);
       var imgsunny = "'images/Hot.png'";
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
 document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
-      if(cloud_description == "clear sky"
+      if(cloud_description == "clear sky")
          {
       document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
     }
-      if(cloud_description == "few clouds"
+      if(cloud_description == "few clouds")
          {
       document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
     }
