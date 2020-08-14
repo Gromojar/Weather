@@ -18,7 +18,11 @@ request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl
 request.onload = function () {
 }
 request.send()
-
+  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + "sunny";
+  request2.open('GET', requesturl, true);
+           request2.onload = function () {
+}
+request2.send()
 function show()
   {
 mydata = JSON.parse(request.response);
@@ -46,11 +50,7 @@ mydata = JSON.parse(request.response);
          }
       if(cloud_description == "few clouds")
          {
-  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + "sunny";
-  request2.open('GET', requesturl, true);
-           request2.onload = function () {
-}
-request2.send()
+
       mydata2 = JSON.parse(request2.response);
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
