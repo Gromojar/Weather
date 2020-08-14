@@ -18,15 +18,11 @@ request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl
 request.onload = function () {
 }
 request.send()
-  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud_description;
-  request2.open('GET', requesturl, true);
-           request2.onload = function () {
-}
-request2.send()
+
 function show()
   {
 mydata = JSON.parse(request.response);
-mydata2 = JSON.parse(request2.response);
+
     //console.log(mydata.main.temp);
     gif = Math.floor((0 - -10) * Math.random());
     temp = mydata.main.temp;
@@ -35,6 +31,12 @@ mydata2 = JSON.parse(request2.response);
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
+  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud_description;
+  request2.open('GET', requesturl, true);
+           request2.onload = function () {
+}
+request2.send()
+mydata2 = JSON.parse(request2.response);
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " There are " + cloud_description;
     if(temp > 20)
     {
