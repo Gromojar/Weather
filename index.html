@@ -9,6 +9,7 @@ var mydata;
 var mydata2;
 var gif;
 var gifurl;
+var requesturl;
 var request = new XMLHttpRequest()
 var request2 = new XMLHttpRequest();
 
@@ -17,7 +18,8 @@ request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl
 request.onload = function () {
 }
 request.send()
-  request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=Sunny', true);
+  requesturl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S?&q=" + cloud_description;
+  request2.open('GET', requesturl, true);
            request2.onload = function () {
 }
 request2.send()
@@ -43,13 +45,13 @@ mydata2 = JSON.parse(request2.response);
       if(cloud_description == "clear sky")
          {
       document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
-      document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
+      //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
          }
       if(cloud_description == "few clouds")
          {
       mydata2 = JSON.parse(request2.response);
       document.getElementById("cont").innerHTML += "<br><br> So hot outside, but with some clouds";
-      document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
+      //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunnycloudy + ">";
       urlgif = "<video width='320' height='240' controls>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
       document.getElementById("cont").innerHTML += urlgif;
 
