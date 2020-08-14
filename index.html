@@ -27,7 +27,8 @@ mydata = JSON.parse(request.response);
     if(temp > 20)
     {
       var img = "'images/Hot.png'"
-document.getElementById("cont").innerHTML += "<br><br> So hot outside!" + "<div>" + "<img src=" + img + ">" + "/div>";
+document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
+      document.getElementById("img").innerHTML += "<img src=" + img + ">";
       
     }
   }
@@ -38,6 +39,9 @@ document.getElementById("cont").innerHTML += "<br><br> So hot outside!" + "<div>
 </head>
 <body>
 <div id="cont" class="container">
+<div>
+<img id="img" class="img-fluid">
+  </div>
 <p class="text-justify">This shows the weather
   <button type="button" class="btn btn-info" onclick="show()">Show weather</button>
   </p>
