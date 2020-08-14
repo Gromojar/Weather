@@ -4,18 +4,17 @@
 <script>
 var request = new XMLHttpRequest()
 
-request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&mode=html&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
+request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
 
 request.onload = function () {
 }
 request.send()
 
-  
-document.getElementById("demo").innerHTML = request.response;
-
 function show()
   {
-document.getElementById("demo").innerHTML = request.response;
+JSONParser parse = new JSONParser();
+JSONObject jobj = (JSONObject)parse.parse(request.response);
+JSONArray jsonarr_1 = (JSONArray) jobj.get("results");
   }
 </script>
 <html>
