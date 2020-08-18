@@ -35,7 +35,6 @@ mydata = JSON.parse(request.response);
     //request2.open('GET', gifurl, true);
    // request2.onload = function () {
 
-}
 //request2.send();
     console.log(temp);
     console.log(cloud);
@@ -69,15 +68,6 @@ fetch(gifurl)
                  urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + data.data[gif].images.looping.mp4 + "'type='video/mp4'>"
       document.getElementById("cont").innerHTML += urlgif;
 
-  }
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
 }
 </script>
 <html>
