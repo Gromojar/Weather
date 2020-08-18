@@ -24,7 +24,7 @@ request.send();
 
 function show()
   {
-    
+    window.location.reload(true)
 mydata = JSON.parse(request.response);
 
 
@@ -85,7 +85,7 @@ show();
 <div id="cont" class="p-3 mb-2 bg-info text-white ">
 
   </div>
-<button type="button" class="btn btn-info" onclick="window.location.reload(true)">Reload</button>
+<button type="button" class="btn btn-info" onclick="show()">Reload</button>
 	</center>
 </body>
 </html>
