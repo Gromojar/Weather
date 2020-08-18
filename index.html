@@ -43,7 +43,7 @@ mydata = JSON.parse(request.response);
     gif = Math.floor((0 - -20) * Math.random());
 
 
-    document.getElementById("cont").innerHTML += "In Kraków there are " + temp + "°C." + " I can see " + cloud_description;
+    document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + " I can see " + cloud_description;
 
       var imgsunny = "'images/Hot.png'";
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
@@ -80,10 +80,11 @@ show();
 <div class="container rounded-pill">
 <center>
 <div id="cont" class="p-3 mb-2 bg-info text-white">
+  </div>
 <div id="cont2" class="p-3 mb-2 bg-info text-white">
 	Something
 	</div>
-  </div>
+
 <button type="button" class="btn btn-info" onclick="show()">Reload</button>
 	</center>
 </body>
