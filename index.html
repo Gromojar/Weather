@@ -49,7 +49,7 @@ request2.send();
       var imgsunny = "'images/Hot.png'";
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
       
-
+sleep(1000);
 mydata2 = JSON.parse(request2.response);
       //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
@@ -57,6 +57,15 @@ mydata2 = JSON.parse(request2.response);
       document.getElementById("cont").innerHTML += urlgif;
 
   }
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
 </script>
 <html>
 <head>
