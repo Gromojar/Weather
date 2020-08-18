@@ -1,5 +1,3 @@
-This is simple fun with API's javascript project which displays weather in Krakow, Poland.
-
 # Fun with API's
 
 ## Table of contents
