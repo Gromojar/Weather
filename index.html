@@ -58,7 +58,7 @@ fetch(gifurl)
  		console.log(data);
 	        mydata2 = data;
 	urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
-      document.getElementById("cont2").innerHTML = urlgif;
+      document.getElementById("cont2").innerHTML += urlgif;
 	}).catch(function (error) {
 		// if there's an error, log it
 		console.log(error);
