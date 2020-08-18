@@ -1,11 +1,21 @@
-.btn btn-info
+
+
+
+@media (max-width: 576px)
 {
-padding-left:auto;
-padding-right:auto;
-text-align:center;
+
+button
+{
+  width:100%;
+}
 
 }
-.container
+@media (min-width: 992px)
 {
+
+button
+{
+button:200px;
+}
 
 }
