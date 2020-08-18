@@ -49,20 +49,14 @@ fetch(gifurl) // giphy request for api
 		// This is a weird quirk of Fetch
 		return response.json();
 	}).then(function (data) {
-		// Log the data to the console
-		// You would do something with the /posts data here
- 		console.log(data);
+
 	        mydata2 = data;
-	urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+	urlgif = "<video width='600' height='400' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
       document.getElementById("cont2").innerHTML += urlgif;
 	}).catch(function (error) {
 		// if there's an error, log it
 		console.log(error);
 	});
-
-//mydata2 = JSON.parse(request2.response);
-      //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
-      //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
 
 }
 show();
@@ -70,17 +64,17 @@ show();
 <html>
 <head>
 <title>Weather App</title>
-</head> 
+</head>
 <body>
 <body onload="show()">
 <body onload="show()">
 <body onload="show()">
-<div class="container rounded-pill">
+<div class="container">
 <center>
 <div id="cont" class="p-3 mb-2 bg-info text-white">
   </div>
 <div id="cont2" class="p-3 mb-2 bg-info text-white">
-	
+
 	</div>
 
 <button type="button" class="btn btn-info" onclick="show()">Check again</button>
