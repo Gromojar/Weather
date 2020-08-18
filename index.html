@@ -12,8 +12,7 @@ var mydata2;
 var gif;
 var gifurl;
 var requesturl;
-var request = new XMLHttpRequest()
-//var request2 = new XMLHttpRequest();
+var request = new XMLHttpRequest() // define first api request
 
 request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
 //request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=Cloudy', true);
@@ -23,7 +22,7 @@ request.onload = function () {
 request.send();
 //request2.send();
 
-function show()
+function show() // main function
   {
 document.getElementById("cont2").innerHTML = "<br>"
 document.getElementById("cont").innerHTML = "<br>"
@@ -33,23 +32,18 @@ mydata = JSON.parse(request.response);
     temp = mydata.main.temp;
     cloud = mydata.weather[0].main;
     cloud_description = mydata.weather[0].description;
-    gifurl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=" + cloud_description;
-    //request2.open('GET', gifurl, true);
-   // request2.onload = function () {
+    gifurl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=" + cloud_description; // using variable to store and modify gif randomization
 
-//request2.send();
+
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
 
-    //console.log(mydata.main.temp);
     gif = Math.floor((0 - -20) * Math.random());
 
 
     document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + "<br><br>" + "I can see " + cloud_description;
-      var imgsunny = "'images/Hot.png'";
-      var imgsunnycloudy = "'images/Hotwithclouds.png'";
-fetch(gifurl)
+fetch(gifurl) // giphy request for api
 	.then(function (response) {
 		// Get a JSON object from the response
 		// This is a weird quirk of Fetch
