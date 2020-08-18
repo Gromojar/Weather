@@ -51,7 +51,17 @@ fetch(gifurl) // giphy request for api
 	}).then(function (data) {
 
 	        mydata2 = data;
-	urlgif = "<video width='600' height='400' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+
+          var mq = window.matchMedia( "(max-width: 570px)" );
+if (mq.matches) {
+    // window width is at less than 570px
+    urlgif = "<video width='250' height='250' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+}
+else {
+    urlgif = "<video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+}
+
+
       document.getElementById("cont2").innerHTML += urlgif;
 	}).catch(function (error) {
 		// if there's an error, log it
