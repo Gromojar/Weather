@@ -7,7 +7,6 @@ var cloud;
 var cloud_description;
 var mydata;
 var mydata2;
-var data;
 var gif;
 var gifurl;
 var requesturl;
@@ -57,6 +56,7 @@ fetch(gifurl)
 		// Log the data to the console
 		// You would do something with the /posts data here
  		console.log(data);
+	        mydata2 = data;
 	}).catch(function (error) {
 		// if there's an error, log it
 		console.log(error);
@@ -65,7 +65,7 @@ fetch(gifurl)
 //mydata2 = JSON.parse(request2.response);
       //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
-                 urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + data.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+                 urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
       document.getElementById("cont").innerHTML += urlgif;
 
 }
