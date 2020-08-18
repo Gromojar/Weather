@@ -68,7 +68,7 @@ fetch(gifurl)
       //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
                  urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
-      document.getElementById("cont").innerHTML += urlgif;
+      document.getElementById("cont2").innerHTML += urlgif;
 
 }
 show();
@@ -81,8 +81,9 @@ show();
 <body onload="show()">
 <div class="container rounded-pill">
 <center>
-<div id="cont" class="p-3 mb-2 bg-info text-white ">
-
+<div id="cont" class="p-3 mb-2 bg-info text-white">
+<div id="cont2" class="p-3 mb-2 bg-info text-white">
+	</div>
   </div>
 <button type="button" class="btn btn-info" onclick="show()">Reload</button>
 	</center>
