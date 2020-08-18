@@ -48,8 +48,10 @@ request2.send();
 
       var imgsunny = "'images/Hot.png'";
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
-      
-sleep(1000);
+while(request2.response === null)
+{
+sleep(1);
+}
 mydata2 = JSON.parse(request2.response);
       //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
