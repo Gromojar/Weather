@@ -7,19 +7,20 @@ var cloud;
 var cloud_description;
 var mydata;
 var mydata2;
+var data;
 var gif;
 var gifurl;
 var requesturl;
 var request = new XMLHttpRequest()
-var request2 = new XMLHttpRequest();
+//var request2 = new XMLHttpRequest();
 
 request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
-request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=Cloudy', true);
+//request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=Cloudy', true);
 request.onload = function () {
 
 }
 request.send();
-request2.send();
+//request2.send();
 
 function show()
   {
@@ -31,11 +32,11 @@ mydata = JSON.parse(request.response);
     cloud = mydata.weather[0].main;
     cloud_description = mydata.weather[0].description;
     gifurl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=" + cloud_description;
-    request2.open('GET', gifurl, true);
-    request2.onload = function () {
+    //request2.open('GET', gifurl, true);
+   // request2.onload = function () {
 
 }
-request2.send();
+//request2.send();
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
@@ -48,14 +49,24 @@ request2.send();
 
       var imgsunny = "'images/Hot.png'";
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
-while(request2.response === null)
-{
-sleep(1);
-}
-mydata2 = JSON.parse(request2.response);
+fetch(gifurl)
+	.then(function (response) {
+		// Get a JSON object from the response
+		// This is a weird quirk of Fetch
+		return response.json();
+	}).then(function (data) {
+		// Log the data to the console
+		// You would do something with the /posts data here
+ 		console.log(data);
+	}).catch(function (error) {
+		// if there's an error, log it
+		console.log(error);
+	});
+
+//mydata2 = JSON.parse(request2.response);
       //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
-                 urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
+                 urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + data.data[gif].images.looping.mp4 + "'type='video/mp4'>"
       document.getElementById("cont").innerHTML += urlgif;
 
   }
