@@ -23,12 +23,19 @@ request2.send();
 
 function show()
   {
+    
 mydata = JSON.parse(request.response);
-mydata2 = JSON.parse(request2.response);
+
 
     temp = mydata.main.temp;
     cloud = mydata.weather[0].main;
     cloud_description = mydata.weather[0].description;
+    gifurl = "https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=" + cloud_description;
+    request2.open('GET', gifurl, true);
+    request2.onload = function () {
+
+}
+request2.send();
     console.log(temp);
     console.log(cloud);
     console.log(cloud_description);
@@ -43,7 +50,7 @@ mydata2 = JSON.parse(request2.response);
       var imgsunnycloudy = "'images/Hotwithclouds.png'";
       
 
-
+mydata2 = JSON.parse(request2.response);
       //document.getElementById("cont").innerHTML += "<br><br> So hot outside!";
       //document.getElementById("cont").innerHTML += "<img class='align-self-center mr-3' src=" + imgsunny + ">";
                  urlgif = "<br><br><video width='640' height='480' autoplay loop>" + "<source src='" + mydata2.data[gif].images.looping.mp4 + "'type='video/mp4'>"
