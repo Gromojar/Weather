@@ -34,7 +34,7 @@ mydata = JSON.parse(request.response);
     gif = Math.floor((0 - -20) * Math.random());
 
 
-    document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + "<br><br>" + "I can see " + cloud_description;
+    document.getElementById("cont").innerHTML = "In Władysławowo there are " + temp + "°C." + "<br><br>" + "I can see " + cloud_description;
 fetch(gifurl) // giphy request for api
 	.then(function (response) {
 		// Get a JSON object from the response
