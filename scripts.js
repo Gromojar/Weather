@@ -10,7 +10,7 @@ var gifurl;
 var requesturl;
 var request = new XMLHttpRequest() // define first api request
 
-request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Wladyslawowo,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
+request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&mode=json&APPID=606103aa99b1bf025d1b02ff40ca516e', true)
 //request2.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=A1RvKIagTgv0e02pLft03AxVIcDE5H8S&q=Cloudy', true);
 request.onload = function () {
 
@@ -34,7 +34,7 @@ mydata = JSON.parse(request.response);
     gif = Math.floor((0 - -20) * Math.random());
 
 
-    document.getElementById("cont").innerHTML = "In Władysławowo there are " + temp + "°C." + "<br><br>" + "I can see " + cloud_description;
+    document.getElementById("cont").innerHTML = "In Kraków there are " + temp + "°C." + "<br><br>" + "I can see " + cloud_description;
 fetch(gifurl) // giphy request for api
 	.then(function (response) {
 		// Get a JSON object from the response
